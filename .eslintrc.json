@@ -4,6 +4,9 @@
     "test": true,
     "expect": true
   },
+  "env": {
+    "jest": true
+  },
   "rules": {
     "indent": "off",
     "quotes": "off",
