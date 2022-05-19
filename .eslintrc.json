@@ -14,5 +14,6 @@
     "quotes": "off",
     "semi": "off",
     "space-before-function-paren": "off"
-  }
+  },
+  "ignorePatterns": ["jest.config.js"]
 }
