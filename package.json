@@ -22,9 +22,9 @@
   "scripts": {
     "js": "node main.js",
     "mjs": "node --experimental-modules main.mjs",
-    "fmt": "prettier --write *js *.json lib/*js",
-    "fmt:check": "prettier --check *js *.json lib/*js",
-    "lint": "eslint main.js main.mjs lib/*js",
+    "fmt": "prettier --write *js *.json lib/*js **/*.ts",
+    "fmt:check": "prettier --check *js *.json lib/*js **/*.ts",
+    "lint": "eslint main.js main.mjs lib/*js **/*.ts",
     "pretest": "npm run fmt:check && npm run lint",
     "test": "npm run test:js",
     "test:js": "jest --config jest_js.config.js",
@@ -36,16 +36,21 @@
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
+    "@types/jest": "^27.5.1",
     "acorn": "^7.1.1",
-    "babel-jest": "^25.1.0",
+    "babel-jest": "^28.1.0",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "jest": "^25.1.0",
+    "jest": "^28.1.0",
     "prettier": "^1.19.1",
-    "rewire": "^5.0.0"
+    "rewire": "^5.0.0",
+    "ts-jest": "^28.0.2"
+  },
+  "dependencies": {
+    "typescript": "^4.6.4"
   }
 }
